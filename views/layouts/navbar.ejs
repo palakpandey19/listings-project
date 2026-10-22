@@ -1,0 +1,32 @@
+<nav class="navhead navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings">VELORA</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="/listings">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="/listings/new">CREATE LISTING</a></li>
+      </ul>
+
+      <form class="d-flex nav-search" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-primary listbtn" type="submit">Search</button>
+      </form>
+
+      <ul class="navbar-nav ms-lg-3">
+        <% if (!currUser){ %>
+          <li class="nav-item"><a class="nav-link" href="/signup">SIGNUP</a></li>
+          <li class="nav-item"><a class="nav-link" href="/login">LOGIN</a></li>
+        <% } else { %>
+          <li class="nav-item"><a class="nav-link" href="/logout">LOGOUT</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
